@@ -1,0 +1,116 @@
+[{
+  "disabled": false,
+  "name": "FFMPEG",
+  "url": "https://ffmpeg.zeranoe.com/builds/win64/static/",
+  "isURLDirect": false,
+  "install": {
+    "downloadDir": "packages",
+    "installDir": "C:/tools",
+    "commands": [
+      "unzip %{downloadDir}/%{filename_ext} -d %{downloadDir} && cp -r %{downloadDir}/%{filename}/* %{installDir} && rm -rf %{downloadDir}/%{filename}"
+    ]
+  },
+  "selectors": {
+    "url": {
+      "css": "a",
+      "regexp": "ffmpeg-\\d+-\\w+-win64-static.zip",
+      "isLast": true
+    }
+  }
+}, {
+  "disabled": true,
+  "name": "NGINX",
+  "url": "https://nginx.org/download/",
+  "isURLDirect": false,
+  "install": {
+    "downloadDir": "packages",
+    "installDir": "C:/nginx",
+    "commands": [
+      "unzip %{downloadDir}/%{filename_ext} *.exe -r && cp -r %{downloadDir}/%{filename_ext}/* %{installDir} && rm -rf %{downloadDir}/%{filename}"
+    ]
+  },
+  "selectors": {
+    "url": {
+      "css": "a",
+      "regexp": "nginx-\\d+.\\d+.\\d+.zip$",
+      "isLast": true
+    }
+  }
+}, {
+  "disabled": false,
+  "name": "RIPME",
+  "url": "https://github.com/ripmeapp/ripme/releases",
+  "isURLDirect": false,
+  "install": {
+    "downloadDir": "packages",
+    "installDir": "C:/tools/bin",
+    "commands": [
+      "cp %{downloadDir}/%{filename_ext} %{installDir}"
+    ]
+  },
+  "selectors": {
+    "url": {
+      "css": ".repository-content .release-entry .release.label-latest details .Box a",
+      "regexp": "ripme.jar$",
+      "isLast": true
+    }
+  }
+}, {
+  "disabled": false,
+  "name": "DEZOOMIFY-RS",
+  "url": "https://github.com/lovasoa/dezoomify-rs/releases",
+  "isURLDirect": false,
+  "install": {
+    "downloadDir": "packages",
+    "installDir": "C:/tools/bin",
+    "commands": [
+      "cp %{downloadDir}/%{filename_ext} %{installDir}"
+    ]
+  },
+  "selectors": {
+    "url": {
+      "css": ".repository-content .release-entry .release.label-latest details .Box a",
+      "regexp": "dezoomify-rs.exe$",
+      "isLast": true
+    }
+  }
+}, {
+  "disabled": true,
+  "name": "WEBP",
+  "url": "https://storage.googleapis.com/downloads.webmproject.org/releases/webp/index.html",
+  "isURLDirect": false,
+  "install": {
+    "downloadDir": "packages",
+    "installDir": "C:/msys64/usr",
+    "commands": [
+      "unzip -o %{downloadDir}/%{filename_ext} -d %{downloadDir} && cp -r %{downloadDir}/%{filename}/* %{installDir} && rm -rf %{downloadDir}/%{filename}"
+    ]
+  },
+  "selectors": {
+    "url": {
+      "css": "a",
+      "regexp": "libwebp-\\d+.\\d+.\\d+-windows-x64.zip$",
+      "isLast": true
+    }
+  }
+}, {
+  "disabled": false,
+  "name": "PANDOC",
+  "url": "https://github.com/jgm/pandoc/releases",
+  "isURLDirect": false,
+  "install": {
+    "downloadDir": "packages",
+    "installDir": "C:/tools/bin",
+    "gsubFilename": "-windows-x86_64",
+    "commands": [
+      "unzip -o %{downloadDir}/%{filename_ext} -d %{downloadDir} && cp -r %{downloadDir}/%{filename}/* %{installDir} && rm -rf %{downloadDir}/%{filename}"
+    ]
+  },
+  "selectors": {
+    "url": {
+      "css": ".repository-content .release-entry .release.label-latest details .Box a",
+      "regexp": "-windows-x86_64.zip$",
+      "isLast": true
+    }
+  }
+}]
