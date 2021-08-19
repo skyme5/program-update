@@ -1,0 +1,32 @@
+[
+  {
+    "program": "ffmpeg",
+    "repo": "BtbN/FFmpeg-Builds",
+    "name": "ffmpeg-N-\\d+-\\w+-win64-gpl.zip",
+    "cmd": "7z e -oC:/tools/bin {PATH}/ffmpeg.zip -r -y > nul"
+  },
+  {
+    "program": "ripme",
+    "repo": "ripmeapp/ripme",
+    "name": "ripme.jar",
+    "cmd": "cp -f {PATH}/ripme.jar C:/tools/bin/"
+  },
+  {
+    "program": "dezoomify-rs",
+    "repo": "lovasoa/dezoomify-rs",
+    "name": "dezoomify-rs.exe",
+    "cmd": "cp -f {PATH}/dezoomify-rs.exe C:/tools/bin/"
+  },
+  {
+    "program": "pandoc",
+    "repo": "jgm/pandoc",
+    "name": "-x86_64.zip$",
+    "cmd": "7z e -oC:/tools/bin {PATH}/pandoc.zip -r -y > nul"
+  },
+  {
+    "program": "clink",
+    "repo": "chrisant996/clink",
+    "name": "clink.\\d+.\\d+.\\d+.\\w+.zip",
+    "cmd": "7z e -oC:/tools/clink {PATH}/clink.zip -r -y > nul"
+  }
+]
